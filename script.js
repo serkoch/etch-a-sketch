@@ -1,9 +1,9 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('.btn');
+const clear = document.querySelector('.clear');
 const containerHeight = 500;
 const containerWidth = 500;
 const mode = document.querySelector('.mode');
-
 
 function getRandNum() {
     return Math.floor(Math.random() * 255);
@@ -27,6 +27,9 @@ function grid(num) {
         div.style.width = `${width}px`;
         div.classList.add('grid-item');
         container.appendChild(div);
+        clear.addEventListener('click', function() {
+            div.style.backgroundColor = 'whitesmoke';
+        })
         div.addEventListener('mouseover', function() {
             if (mode.textContent === 'Black mode') {
                 div.style.backgroundColor = `rgb(${getRandNum()}, ${getRandNum()}, ${getRandNum()})`;
@@ -41,7 +44,7 @@ btn.addEventListener('click', function userInput() {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
-    let choice = prompt('Please, enter the canvas size fr 1 to 100:');
+    let choice = prompt('Please, enter the canvas size: from 1 to 100');
     userChoice = parseInt(choice);    
     if (userChoice > 0 && userChoice <= 100) {
         grid(userChoice);
@@ -50,4 +53,4 @@ btn.addEventListener('click', function userInput() {
     }
 });
 
-
+grid(10);
