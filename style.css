@@ -8,21 +8,33 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  gap: 50px;
-  background-color: rgb(40, 40, 40);
+  justify-content: space-evenly;
+  background-color: #1d2a35;
   height: 100vh;
   width: 100%;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+h1 {
+  text-shadow: 0 0 5px black;
+  color: #e5e7eb;
+  font-size: 40px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
-input[type="color"] {
-  margin: 20px;
+.gridControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type='color'] {
+  margin: 0 20px;
   border-radius: 15px;
   padding: 0;
   border: none;
@@ -31,20 +43,24 @@ input[type="color"] {
   outline: none;
 }
 
-input[type="color"]::-moz-color-swatch {
+input[type='color']:hover {
+  box-shadow: 0px 0px 15px aqua;
+}
+
+input[type='color']::-moz-color-swatch {
   border: none;
   border-color: transparent;
   outline: none;
 }
 
-input[type="color"]::-webkit-color-swatch-wrapper {
+input[type='color']::-webkit-color-swatch-wrapper {
   padding: 0;
   border-radius: 0;
   border-color: transparent;
   outline: none;
 }
 
-input[type="color"]::-webkit-color-swatch {
+input[type='color']::-webkit-color-swatch {
   border: none;
   border-color: transparent;
   outline: none;
@@ -56,23 +72,32 @@ input:focus {
 }
 
 button {
-  margin: 20px;
-  padding: 15px;
+  margin: 0 20px;
+  padding: 10px 0;
   border-radius: 15px;
   border: 0;
-  width: 15vh;
+  width: 20vh;
   background-color: white;
   color: black;
   display: block;
+  font-size: 16px;
+  font-weight: 900;
+  font-family: inherit;
+  letter-spacing: 3px;
+}
+
+button:hover {
+  background-color: rgb(200, 255, 255);
+  box-shadow: 0px 0px 5px aqua;
 }
 
 button:active {
   transform: translateY(1px);
-  background-color: rgb(220, 255, 255);
 }
 
-button:hover {
+.active {
   box-shadow: 0px 0px 15px aqua;
+  border: 1px solid aqua;
 }
 
 .container {
