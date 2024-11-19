@@ -65,4 +65,4 @@ btn.addEventListener("click", function userInput() {
   }
 });
 
-grid(10);
+grid(30);
