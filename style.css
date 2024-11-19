@@ -10,16 +10,60 @@ body {
   align-items: center;
   gap: 50px;
   background-color: rgb(40, 40, 40);
+  height: 100vh;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input[type="color"] {
+  margin: 20px;
+  border-radius: 15px;
+  padding: 0;
+  border: none;
+  width: 10vh;
+  height: 10vh;
+  outline: none;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-color: transparent;
+  outline: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 0;
+  border-color: transparent;
+  outline: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-color: transparent;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+  border-color: transparent;
 }
 
 button {
-  margin: 50px 30px 10px;
+  margin: 20px;
   padding: 15px;
   border-radius: 15px;
   border: 0;
   width: 15vh;
   background-color: white;
   color: black;
+  display: block;
 }
 
 button:active {
@@ -38,7 +82,6 @@ button:hover {
   height: 500px;
   box-shadow: 0px 0px 15px white;
   background-color: whitesmoke;
-  margin: auto;
   user-select: none;
 }
 

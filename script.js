@@ -4,6 +4,7 @@ const clear = document.querySelector(".clear");
 const containerHeight = 500;
 const containerWidth = 500;
 const mode = document.querySelector(".mode");
+const colorPicker = document.querySelector('.colorPicker');
 
 function getRandNum() {
   return Math.floor(Math.random() * 255);
@@ -19,7 +20,7 @@ document.body.addEventListener("mouseup", function () {
 
 mode.addEventListener("click", function () {
   if (mode.textContent === "Rainbow mode") {
-    mode.textContent = "Black mode";
+    mode.textContent = "Color mode";
   } else {
     mode.textContent = "Rainbow mode";
   }
@@ -42,10 +43,10 @@ function grid(num) {
     });
     div.addEventListener("mousemove", function () {
       if (draw) {
-        if (mode.textContent === "Black mode") {
+        if (mode.textContent === "Color mode") {
           div.style.backgroundColor = `rgb(${getRandNum()}, ${getRandNum()}, ${getRandNum()})`;
         } else {
-          div.style.backgroundColor = "black";
+          div.style.backgroundColor = colorPicker.value;
         }
       }
     });
